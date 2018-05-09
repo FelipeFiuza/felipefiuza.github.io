@@ -1,0 +1,166 @@
+body {
+background-color: #222;
+color: #999;
+}
+
+#container{
+    max-width: 900px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#site-navigation li, #social-media li{
+    list-style: none;
+}
+
+#site-navigation li{
+    display: inline-block;
+    position: relative;
+    top: 1.4em;
+    margin-right: 2%;
+
+}
+
+#social-media li {
+    display: inline-block;
+    position: relative;
+    top: 1.4em;
+    margin-left: 1%;               
+
+}
+
+#social-media {
+    position: flex;
+    text-align: right;
+}
+
+a {
+    color: #999;
+
+}
+
+a:hover, li:hover{
+
+    color: #FFF;
+    text-decoration: overline;
+
+}
+
+#navbar h1 {
+    font-family: "Impact";
+}
+
+#navbar {
+    padding-top: 10px;
+    margin:0;
+    padding: -5px;
+    border: none;
+}
+
+hr {
+    border-color:#999;
+}
+
+#container hr:nth-of-type(1){
+    position: relative;
+    bottom: 18px;
+}
+
+ #container hr:nth-of-type(2){
+    position: relative;
+    top: 33px;
+}
+
+#profile {
+    text-align: justify;
+}
+
+#profile div img{
+    width: 40%;
+    max-width: 230px;
+}
+
+#profile div img:nth-child(1){
+    float: right;
+    position: relative;
+    top: 20%;
+}
+
+#projects, #certifications{
+    width: 100%;
+}
+
+#projects h4{
+    padding: 55px 45% 0px 46%;
+    text-decoration:underline;
+}
+
+#certifications h4{
+    padding: 55px 45% 30px 43%;
+    text-decoration:underline;
+}
+
+ #certifications h6, #ongoing h6{
+     line-height: 1.5
+}
+
+#ongoing h4{
+    padding: 55px 45% 30px 45%;
+    text-decoration:underline;
+}
+
+#projects figcaption{
+    text-align: center;
+}
+
+#projects figure{
+    position: relative;
+    left: 20px;
+    margin-top: 30px;
+}
+
+#projects img{
+    border-radius: 20px;
+}
+
+#footer p{
+    position: flex;
+    width: 100%;
+    text-align: right;
+}
+
+@media (max-width: 575.98px) { 
+
+    #site-navigation li{
+        position: static;
+    }
+
+    #social-media li {
+        top:-1.0em;
+    }
+
+    #navbar h1 {
+        bottom:0.4em;       
+    }
+
+    #container hr:nth-of-type(1){
+        bottom:45px ;
+
+    }
+
+    #social-media{
+        text-align: left;
+    }
+
+    #projects h3{
+        padding: 40px 90% 10px 10%;
+    }               
+
+}
+
+@media (max-width: 767.98px) {
+
+    #projects h3{
+         padding: 40px 90% 10px 10%;
+    }
+}
