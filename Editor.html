@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Escape de caracteres especiais</title>
+    </head>
+    <body>        
+        <label for="inputText">Insira o texto aqui:</label><br>
+        <textarea id="inputText"></textarea><br><br>
+
+        <input id="conversionBtn" type="button" value="Converter caracteres especiais"><br><br>
+
+        <label for="outputText">Conversão:</label><br>
+        <textarea id="outputText"></textarea>
+        <script>
+            document.getElementById('conversionBtn').onclick = function () {
+                const inputText = document.getElementById('inputText').value;
+                //const outputText = inputText.map(convertUtf8);
+                document.getElementById('outputText').innerHTML = unicodeEscape(inputText);
+
+
+                function convertUtf8(value, index, array) {
+                    if (array[index].charCodeAt() > 192 && array[index].charCodeAt() < 255) {
+                        var hexaCode = array[index].charCodeAt().toString(16);
+                        return '\\u' + hexaCode;
+                    }
+                    else 
+                    {
+                        return value;
+                    }
+                }
+
+                function concatArrayValues(value) {
+                    return value;
+                }
+
+                function unicodeEscape(str) {
+                    return str.split('').map(function(character) {
+                        if (character.charCodeAt() > 192 && character.charCodeAt() < 255)
+                            return '\\u' + ('0000' + character.charCodeAt().toString(16)).toUpperCase().slice(-4);
+                        else
+                            return character;
+	                }).join('');
+                }
+
+            }
+
+        </script>
+    </body>
+</html>
